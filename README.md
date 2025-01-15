@@ -16,8 +16,9 @@ mungkin akan berguna bagi kalian.
 ## 📦 Example Api Server cURL
 
 Langkah-langkah untuk menginstal dan menjalankan proyek ini di mesin lokal Anda.
+Atau mau di server kalian juga boleh hhe.
 
-1. Contoh Code PHP: `getVideo.php`
+1. Contoh Code PHP: `getVideo.php` page 2/23
 ```php
 <?php
 $curl = curl_init();
