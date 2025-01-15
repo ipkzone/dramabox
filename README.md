@@ -1,29 +1,77 @@
 # 🚀 API SERVER DRAMABOX
 
-[![GitHub issues](https://img.shields.io/github/issues/ipkzone/repository)](https://github.com/ipkzone/repository/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ipkzone/repository)](https://github.com/ipkzone/repository/stargazers)
-[![License](https://img.shields.io/github/license/ipkzone/repository)](https://github.com/ipkzone/repository/blob/main/LICENSE)
-
-Deskripsi singkat proyek Anda. Jelaskan apa yang dilakukan proyek ini, siapa yang dapat menggunakannya, dan manfaat utamanya.
+Api server sederhana untuk mengambil data scraper video dari dramabox
+mungkin akan berguna bagi kalian.
 
 ## 🌟 Fitur
 
-- ✅ Fitur 1: Jelaskan fitur pertama Anda.
-- ✅ Fitur 2: Jelaskan fitur kedua Anda.
-- ✅ Fitur 3: Jelaskan fitur ketiga Anda.
+- ✅ Fitur 1: Searching Video With Page
+- ✅ Fitur 2: Scrapping Video By Page
+- ✅ Fitur 3: Auto Scrapping Link Video Dramabox
 
-## 🖼️ Cuplikan Layar
+## Contoh Web Target
 
 <center><img src="dm.png" alt="tools"></center>
 
-![Demo](https://via.placeholder.com/800x400.png?text=Tambahkan+Cuplikan+Layar)
-
-Cuplikan layar yang menunjukkan bagaimana proyek Anda bekerja.
-
-## 📦 Instalasi
+## 📦 Example Api Server cURL
 
 Langkah-langkah untuk menginstal dan menjalankan proyek ini di mesin lokal Anda.
 
-1. Clone repositori ini:
-   ```bash
-   git clone https://github.com/username/repository.git
+1. Contoh Code PHP: `getVideo.php`
+```php
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://serveripkzone.site/dramabox/?page=".$page."",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => [
+    "Accept: */*",
+    "Content-Type: application/json",
+    "User-Agent: Api Server Ipkzone (https://ipkzone.my.id)"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+
+
+2. Contoh Code PHP: `getLinkVideo.php`
+```php
+<?php
+$curl = curl_init();
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://serveripkzone.site/dramabox/video.php?id=".$id."&idName=".$idName."",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => [
+    "Accept: */*",
+    "Content-Type: application/json",
+    "User-Agent: Api Server Ipkzone (https://ipkzone.my.id)"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+curl_close($curl);
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
