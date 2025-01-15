@@ -14,6 +14,8 @@ Deskripsi singkat proyek Anda. Jelaskan apa yang dilakukan proyek ini, siapa yan
 
 ## 🖼️ Cuplikan Layar
 
+<center><img src="dm.png" alt="tools"></center>
+
 ![Demo](https://via.placeholder.com/800x400.png?text=Tambahkan+Cuplikan+Layar)
 
 Cuplikan layar yang menunjukkan bagaimana proyek Anda bekerja.
