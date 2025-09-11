@@ -36,6 +36,7 @@ echo restAPI::seach();
 ```php
 // function getVideo untuk mengambil data path URL video all sudah otomatis bypass signature.
 // string requestID hasil dari data function search sialhkan masukan ke dalam function getVideo
+
 $body = json_encode([
   'type' => 'video',
   'requestID' => '41000119793'
@@ -44,6 +45,7 @@ $body = json_encode([
 echo restAPI::getVideo();
 ```
 Silahkan kembangkan lagi sesuka kalian.
+Jika berguna api server nya silahkan follow akun github nya ya wkwkwk.
 
 # Note
 The script runs with the license key,
