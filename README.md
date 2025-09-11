@@ -21,6 +21,13 @@ Atau mau di server kalian juga boleh hhe.
 1. Contoh function search: `getting title video`
 ```php
 // function search untuk menemukan judul film yang akan kalian cari.
+// string keyword bisa anda ubah semau kalian.
+
+ $body = json_encode([
+  'type' => 'search',
+  'keyword' => 'CEO',
+]);
+
 echo restAPI::seach();
 ```
 
@@ -28,5 +35,11 @@ echo restAPI::seach();
 2. Contoh function getVideo: `getting all path video`
 ```php
 // function getVideo untuk mengambil data path URL video all sudah otomatis bypass signature.
+// string requestID hasil dari data function search sialhkan masukan ke dalam function getVideo
+$body = json_encode([
+  'type' => 'video',
+  'requestID' => '41000119793'
+]);
+
 echo restAPI::getVideo();
 ```
