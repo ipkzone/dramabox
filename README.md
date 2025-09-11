@@ -43,3 +43,14 @@ $body = json_encode([
 
 echo restAPI::getVideo();
 ```
+Silahkan kembangkan lagi sesuka kalian.
+
+# Note
+The script runs with the license key,
+if you don't have a license key then you can't run it,
+to get a license key you have to ask the creator for its activation for a donation of course,
+This script blocks multiple user logins so that the script remains safe and secure.
+
+Regards,
+**Iddant ID**
+
