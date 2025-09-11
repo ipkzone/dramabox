@@ -5,9 +5,9 @@ mungkin akan berguna bagi kalian.
 
 ## 🌟 Fitur
 
-- ✅ Fitur 1: Searching Video With Page
-- ✅ Fitur 2: Scrapping Video By Page
-- ✅ Fitur 3: Auto Scrapping Link Video Dramabox
+- ✅ Fitur 1: Searching Video With Title
+- ✅ Fitur 2: Scrapping Video By Title
+- ✅ Fitur 3: Auto Generate Signature & Full bypass
 
 ## Contoh Web Target
 
@@ -18,61 +18,15 @@ mungkin akan berguna bagi kalian.
 Langkah-langkah untuk menginstal dan menjalankan proyek ini di mesin lokal Anda.
 Atau mau di server kalian juga boleh hhe.
 
-1. Contoh Code PHP: `getVideo.php` page 2/23
+1. Contoh function search: `getting title video`
 ```php
-<?php
-$curl = curl_init();
-curl_setopt_array($curl, [
-  CURLOPT_URL => "https://serveripkzone.site/dramabox/?page=".$page."",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => [
-    "Accept: */*",
-    "Content-Type: application/json",
-    "User-Agent: Api Server Ipkzone (https://ipkzone.my.id)"
-  ],
-]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-curl_close($curl);
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-}
+// function search untuk menemukan judul film yang akan kalian cari.
+echo restAPI::seach();
 ```
 
 
-2. Contoh Code PHP: `getLinkVideo.php`
+2. Contoh function getVideo: `getting all path video`
 ```php
-<?php
-$curl = curl_init();
-curl_setopt_array($curl, [
-  CURLOPT_URL => "https://serveripkzone.site/dramabox/video.php?id=".$id."&idName=".$idName."",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => [
-    "Accept: */*",
-    "Content-Type: application/json",
-    "User-Agent: Api Server Ipkzone (https://ipkzone.my.id)"
-  ],
-]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-curl_close($curl);
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
-}
+// function getVideo untuk mengambil data path URL video all sudah otomatis bypass signature.
+echo restAPI::getVideo();
 ```
