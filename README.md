@@ -44,7 +44,7 @@ $body = json_encode([
 
 echo restAPI::getVideo();
 ```
-Silahkan kembangkan lagi sesuka kalian.
+Silahkan kembangkan lagi sesuka kalian.<br>
 Jika berguna api server nya silahkan follow akun github nya ya wkwkwk.
 
 # Note
