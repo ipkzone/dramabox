@@ -1,51 +1,108 @@
-# 🚀 API SERVER DRAMABOX
+# 🚀 Dramabox API Server
 
-Api server sederhana untuk mengambil data scraper video dari dramabox
-mungkin akan berguna bagi kalian.
+API server sederhana untuk mengambil data **video & episode** dari hasil scraping Dramabox.  
+Proyek ini dibuat untuk keperluan **eksperimen, pembelajaran, dan pengembangan aplikasi**.
 
-## Contoh Web Target
+> ⚠️ **Catatan:** Project ini menggunakan sistem **License Key** demi keamanan.
 
-<center><img src="dm.png" alt="dramabox"></center><br?
+---
 
-## Example Search
-<center><img src="search.png" alt="dramabox"></center>
-## Example Top Range Film
-<center><img src="range.png" alt="dramabox"></center>
-## Example Film Latest Update
-<center><img src="latest.png" alt="dramabox"></center>
+## ✨ Fitur Utama
 
+- 🔍 **Search Video**
+- 📊 **Top Popular Rank**
+- 🆕 **Latest Update Video**
+- 🎬 **Daftar Episode Lengkap**
+- 🔐 **License Key Protection**
 
-## 📦 Example Api Server cURL
+---
 
-Langkah-langkah untuk menginstal dan menjalankan proyek ini di mesin lokal Anda.
-Atau mau di server kalian juga boleh hhe.
+## 🌐 Contoh Web Target
 
-1. Contoh function search: `getting title video`
+<p align="center">
+  <img src="dm.png" alt="Dramabox Web" width="80%">
+</p>
+
+---
+
+## 🔍 Example Search
+
+<p align="center">
+  <img src="search.png" alt="Search Video" width="80%">
+</p>
+
+---
+
+## 📈 Example Top Rank Film
+
+<p align="center">
+  <img src="range.png" alt="Top Rank" width="80%">
+</p>
+
+---
+
+## 🆕 Example Latest Update
+
+<p align="center">
+  <img src="latest.png" alt="Latest Update" width="80%">
+</p>
+
+---
+
+## 📦 API Endpoint Examples (cURL)
 ```php
-// function search untuk menemukan judul film yang akan kalian cari.
-// string keyword bisa anda ubah semau kalian.
+API_TOKEN  : 3203fccb29d361eac970918731d68255abc9c7907fba4b54f432743f754f62f3
+LICENSE_KEY: AAVB-TW33-6M40-JOLQ
 
- $body = json_encode([
-  'type' => 'search',
-  'keyword' => 'CEO',
-]);
-
-echo restAPI::seach();
 ```
 
-
-2. Contoh function getVideo: `getting all path video`
-```php
-// function getVideo untuk mengambil data path URL video all sudah otomatis bypass signature.
-// string requestID hasil dari data function search sialhkan masukan ke dalam function getVideo
-
-$body = json_encode([
-  'type' => 'video',
-  'requestID' => '41000119793'
-]);
-
-echo restAPI::getVideo();
+### 🔍 Search Video
+```bash
+curl -X GET "https://zmailx.online/dracin/search/?keyword=sulih suara" \
+ -H "Authorization: Bearer YOUR_API_TOKEN" \
+ -H "X-License-Key: YOUR_LICENSE_KEY"
 ```
+
+### 📊 Get Top Popular Rank Video
+```bash
+curl -X GET "https://zmailx.online/dracin/rank/?type=1" \
+ -H "Authorization: Bearer YOUR_API_TOKEN" \
+ -H "X-License-Key: YOUR_LICENSE_KEY"
+```
+
+### 🆕 Get Latest Video
+```bash
+curl -X GET "https://zmailx.online/dracin/latest" \
+ -H "Authorization: Bearer YOUR_API_TOKEN" \
+ -H "X-License-Key: YOUR_LICENSE_KEY"
+```
+
+### 🎬 Get All Episode Video
+```bash
+curl -X GET "https://zmailx.online/dracin/{bookId}/episode" \
+ -H "Authorization: Bearer YOUR_API_TOKEN" \
+ -H "X-License-Key: YOUR_LICENSE_KEY"
+```
+
+### 🔐 License System
+- Script tidak dapat dijalankan tanpa License Key
+- License Key bersifat private & terikat user
+- Untuk mendapatkan License Key, silakan hubungi creator
+(Activation via donation)
+
+###  🚀 Pengembangan
+
+Silakan:
+- Fork 🍴
+- Modifikasi ✍️
+- Kembangkan sesuai kebutuhan 🤝<br>
+Jika API ini bermanfaat, jangan lupa ⭐ Star & Follow GitHub creator-nya 😄
+
+### ⚠️ Disclaimer
+Project ini dibuat untuk tujuan edukasi & eksperimen.
+Segala bentuk penyalahgunaan berada di luar tanggung jawab developer.
+
+
 Silahkan kembangkan lagi sesuka kalian.<br>
 Jika berguna api server nya silahkan follow akun github nya ya wkwkwk.
 
