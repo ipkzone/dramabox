@@ -1,50 +1,59 @@
-# 🚀 Dramabox API Server
+<p align="center">
+  <img src="dm.png" alt="Dramabox API" width="85%">
+</p>
 
-API server sederhana untuk mengambil data **video & episode** dari hasil scraping Dramabox.  
-Proyek ini dibuat untuk keperluan **eksperimen, pembelajaran, dan pengembangan aplikasi**.
-
-> ⚠️ **Catatan:** Project ini menggunakan sistem **License Key** demi keamanan.
-
----
-
-## ✨ Fitur Utama
-
-- 🔍 **Search Video**
-- 📊 **Top Popular Rank**
-- 🆕 **Latest Update Video**
-- 🎬 **Daftar Episode Lengkap**
-- 🔐 **License Key Protection**
-
----
-
-## 🌐 Contoh Web Target
+<h1 align="center">🚀 Dramabox API Server</h1>
 
 <p align="center">
-  <img src="dm.png" alt="Dramabox Web" width="80%">
+  <b>Simple & Secure API Server for Dramabox Video Scraper</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-success.svg">
+  <img src="https://img.shields.io/badge/license-private-red.svg">
+  <img src="https://img.shields.io/badge/made%20with-PHP-blue.svg">
+  <img src="https://img.shields.io/badge/API-REST-orange.svg">
 </p>
 
 ---
 
-## 🔍 Example Search
+## 📌 Deskripsi
 
-<p align="center">
-  <img src="search.png" alt="Search Video" width="80%">
-</p>
+**Dramabox API Server** adalah API sederhana untuk mengambil data **video, ranking, update terbaru, dan episode** dari hasil scraping Dramabox.
 
----
-
-## 📈 Example Top Rank Film
-
-<p align="center">
-  <img src="range.png" alt="Top Rank" width="80%">
-</p>
+Cocok digunakan untuk:
+- Backend aplikasi streaming
+- Data eksperimen & riset
+- Project pembelajaran REST API
+- Integrasi ke web / mobile app
 
 ---
 
-## 🆕 Example Latest Update
+## ✨ Fitur
 
+- 🔍 Search Video by Keyword  
+- 📊 Top Popular Rank  
+- 🆕 Latest Update Video  
+- 🎬 Get All Episode by ID  
+- 🔐 License Key Protection  
+
+---
+
+## 🌐 Preview
+
+### 🔍 Search Video
 <p align="center">
-  <img src="latest.png" alt="Latest Update" width="80%">
+  <img src="search.png" width="80%">
+</p>
+
+### 📈 Top Rank
+<p align="center">
+  <img src="range.png" width="80%">
+</p>
+
+### 🆕 Latest Update
+<p align="center">
+  <img src="latest.png" width="80%">
 </p>
 
 ---
