@@ -3,15 +3,17 @@
 Api server sederhana untuk mengambil data scraper video dari dramabox
 mungkin akan berguna bagi kalian.
 
-## 🌟 Fitur
-
-- ✅ Fitur 1: Searching Video With Title
-- ✅ Fitur 2: Scrapping Video By Title
-- ✅ Fitur 3: Auto Generate Signature & Full bypass
-
 ## Contoh Web Target
 
-<center><img src="dm.png" alt="tools"></center>
+<center><img src="dm.png" alt="dramabox"></center><br?
+
+## Example Search
+<center><img src="search.png" alt="dramabox"></center>
+## Example Top Range Film
+<center><img src="range.png" alt="dramabox"></center>
+## Example Film Latest Update
+<center><img src="latest.png" alt="dramabox"></center>
+
 
 ## 📦 Example Api Server cURL
 
